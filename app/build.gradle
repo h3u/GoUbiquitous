@@ -2,8 +2,12 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 
 android {
-    compileSdkVersion 21
+    compileSdkVersion 23
     buildToolsVersion "21.1.2"
+
+    // load api key and put it to build config
+    Properties localProperties = new Properties()
+    localProperties.load(new FileInputStream(file(project.rootProject.file("local.properties"))))
 
     defaultConfig {
         applicationId "com.example.android.sunshine.app"
@@ -19,19 +23,20 @@ android {
         }
     }
     buildTypes.each {
-        it.buildConfigField 'String', 'OPEN_WEATHER_MAP_API_KEY', MyOpenWeatherMapApiKey
+        it.buildConfigField 'String', 'OPEN_WEATHER_MAP_API_KEY', localProperties["MyOpenWeatherMapApiKey"]
     }
 }
 
 dependencies {
+    final SUPPORT_VERSION = '23.3.0'
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.github.bumptech.glide:glide:3.5.2'
-    compile 'com.android.support:support-annotations:22.2.0'
-    compile 'com.android.support:gridlayout-v7:22.2.0'
-    compile 'com.android.support:cardview-v7:22.2.0'
-    compile 'com.android.support:appcompat-v7:22.2.0'
-    compile 'com.android.support:design:22.2.0'
-    compile 'com.android.support:recyclerview-v7:22.2.0'
-    compile 'com.google.android.apps.muzei:muzei-api:2.0'
-    compile 'com.google.android.gms:play-services-gcm:7.5.0'
+    compile "com.github.bumptech.glide:glide:3.5.2"
+    compile "com.android.support:support-annotations:$SUPPORT_VERSION"
+    compile "com.android.support:gridlayout-v7:$SUPPORT_VERSION"
+    compile "com.android.support:cardview-v7:$SUPPORT_VERSION"
+    compile "com.android.support:appcompat-v7:$SUPPORT_VERSION"
+    compile "com.android.support:design:$SUPPORT_VERSION"
+    compile "com.android.support:recyclerview-v7:$SUPPORT_VERSION"
+    compile "com.google.android.apps.muzei:muzei-api:2.0"
+    compile "com.google.android.gms:play-services-gcm:8.4.0"
 }
