@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="time_text_size">40dp</dimen>
+    <dimen name="time_text_size_round">45dp</dimen>
+    <dimen name="date_text_size">18dp</dimen>
+    <dimen name="date_text_size_round">20dp</dimen>
+    <dimen name="temperature_text_size">28dp</dimen>
+    <dimen name="temperature_text_size_round">32dp</dimen>
+    <dimen name="temperature_horizontal_margin">3dp</dimen>
+    <dimen name="time_x_offset">15dp</dimen>
+    <dimen name="time_x_offset_round">25dp</dimen>
+    <dimen name="time_y_offset">90dp</dimen>
+    <dimen name="separator_length">60dp</dimen>
+    <dimen name="vertical_center_padding">20dp</dimen>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#03A9F4</color>  <!-- 500 -->
+    <color name="primary_dark">#0288D1</color>  <!-- 700 -->
+    <color name="primary_light">#B3E5FC</color> <!-- 100 -->
+    <color name="accent">#FFD740</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="grey">#cccccc</color>
+    <color name="grey_700">#646464</color>
+    <color name="black">#000000</color>
+
+    <color name="background">@color/primary</color>
+    <color name="primary_text">@color/white</color>
+    <color name="secondary_text">@color/primary_light</color>
+</resources>
