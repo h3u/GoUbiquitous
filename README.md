@@ -1,52 +1,33 @@
-Advanced Android Sample App
-===================================
+# Go Ubiquitous
 
-Synchronizes weather information from OpenWeatherMap on Android Phones and Tablets. Used in the Udacity Advanced Android course.
+This project adds an Android Wear Watchface to the given Weather App ["Sunshine"](https://github.com/udacity/Advanced_Android_Development/tree/7.05_Pretty_Wallpaper_Time) (Udacity Nanodegree Project 6).
 
-Pre-requisites
---------------
-Android SDK 21 or Higher
-Build Tools version 21.1.2
-Android Support AppCompat 22.2.0
-Android Support Annotations 22.2.0
-Android Support GridLayout 22.2.0
-Android Support CardView 22.2.0
-Android Support Design 22.2.0
-Android Support RecyclerView 22.2.0
-Google Play Services GCM 7.0.0
-BumpTech Glide 3.5.2
+Implemented enhancements:
+
+- Digital Watchface displaying time, date, weekday, high-/low-Temperature and a weather indicator icon
+- additional update of the wearable via `DataApi` using data items when the app synchronizes the weather data
+- storage of received weather data from handheld to `SharedPreferences`
+- request for synchronization from wearable to handheld using messages with `CapabilityApi` and `MessageApi`
 
 
-Getting Started
----------------
-This sample uses the Gradle build system.  To build this project, use the
-"gradlew build" command or use "Import Project" in Android Studio.
+## Screenshots
 
-Support
--------
 
-- Google+ Community: https://plus.google.com/communities/105153134372062985968
-- Stack Overflow: http://stackoverflow.com/questions/tagged/android
+![Screenshot of square Watchface](Screenshot_Watchface_Square.png)
+![Screenshot of square Watchface in ambient mode](Screenshot_Watchface_Square_Ambient.png)
 
-Patches are encouraged, and may be submitted by forking this project and
-submitting a pull request through GitHub. Please see CONTRIBUTING.md for more details.
+![Screenshot of round Watchface with chin](Screenshot_Watchface_Round_Chin.png)
+![Screenshot of round Watchface with chin in ambient mode](Screenshot_Watchface_Round_Chin_Ambient.png)
 
-License
--------
-Copyright 2015 The Android Open Source Project, Inc.
+![Screenshot of round Watchface](Screenshot_Watchface_Round.png)
+![Screenshot of round Watchface in ambient mode](Screenshot_Watchface_Round_Ambient.png)
 
-Licensed to the Apache Software Foundation (ASF) under one or more contributor
-license agreements.  See the NOTICE file distributed with this work for
-additional information regarding copyright ownership.  The ASF licenses this
-file to you under the Apache License, Version 2.0 (the "License"); you may not
-use this file except in compliance with the License.  You may obtain a copy of
-the License at
 
-http://www.apache.org/licenses/LICENSE-2.0
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
-License for the specific language governing permissions and limitations under
-the License.
+## Configuration
 
+Add your personal api key for [http://openweathermap.org/](http://openweathermap.org/appid) to
+`local.properties` before building the app.
+
+Please add following line:
+`MyOpenWeatherMapApiKey="<MY_PERSONAL_API_KEY>"`
